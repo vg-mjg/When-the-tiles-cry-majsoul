@@ -1,0 +1,58 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 879, in script
+    k "Ron! Yakuman! Get sent to the shadowrealm!"
+  File "game/script.rpy", line 879, in script
+    k "Ron! Yakuman! Get sent to the shadowrealm!"
+IOError: Couldn't find file 'act_kan.mp3'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "/home/cero/renpy-7.3.5-sdk/renpy/bootstrap.py", line 316, in bootstrap
+    renpy.main.main()
+  File "/home/cero/renpy-7.3.5-sdk/renpy/main.py", line 578, in main
+    run(restart)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/main.py", line 143, in run
+    renpy.execution.run_context(True)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/execution.py", line 908, in run_context
+    context.run()
+  File "game/script.rpy", line 879, in script
+    k "Ron! Yakuman! Get sent to the shadowrealm!"
+  File "game/script.rpy", line 879, in script
+    k "Ron! Yakuman! Get sent to the shadowrealm!"
+  File "/home/cero/renpy-7.3.5-sdk/renpy/ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/character.py", line 842, in do_display
+    **display_args)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/display/core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/display/core.py", line 3380, in interact_core
+    renpy.audio.audio.periodic()
+  File "/home/cero/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1060, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "/home/cero/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1038, in periodic_thread_main
+    periodic_pass()
+  File "/home/cero/renpy-7.3.5-sdk/renpy/audio/audio.py", line 979, in periodic_pass
+    c.periodic()
+  File "/home/cero/renpy-7.3.5-sdk/renpy/audio/audio.py", line 457, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/audio/audio.py", line 73, in load
+    rv = renpy.loader.load(fn)
+  File "/home/cero/renpy-7.3.5-sdk/renpy/loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'act_kan.mp3'.
+
+Linux-4.13.0-32-generic-x86_64-with-debian-stretch-sid
+Ren'Py 7.3.5.606
+When the tiles cry 1.0
+Sun Jun  7 11:18:37 2020
